@@ -1,0 +1,219 @@
+/* === ESTILOS BASE (Flexbox) === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2ff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === HU1: Navegación Flexible === */
+header {
+    border: 3px solid #0a2540;
+    border-radius: 15px;
+    margin: 15px;
+    background: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Distribuye espacio entre elementos */
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap; /* Permite que los elementos bajen en móvil */
+}
+
+nav img {
+    flex-grow: 0; /* Evita que el logo crezca */
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    flex-grow: 1; /* Ocupa espacio disponible */
+    justify-content: flex-end; /* Alinea items a la derecha */
+}
+
+/* === HU2: Secciones Adaptables === */
+main {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal */
+    padding: 20px;
+}
+
+hero {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Imagen02 {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+/* === HU3: Galería de Imágenes === */
+.galeria {
+    width: 100%;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contenedor-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contenedor-galeria img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-grow: 1; /* Las imágenes crecen para llenar espacio */
+}
+
+/* === MEDIA QUERIES === */
+
+/* Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    hero {
+        width: 90%;
+    }
+    
+    .contenedor-galeria img {
+        width: 200px; /* 4 columnas */
+    }
+}
+
+/* Móvil (<= 767px) + Modo Oscuro */
+@media screen and (max-width: 767px) {
+    /* Modo Oscuro */
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    
+    header {
+        background-color: #1e1e1e;
+        border-color: #d4af37;
+    }
+    
+    /* HU1: Menú apilado verticalmente */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    /* HU2: Ajuste de secciones */
+    hero {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    /* HU3: Galería 2 columnas */
+    .contenedor-galeria img {
+        width: 45%; /* 2 columnas */
+        flex-grow: 0;
+    }
+    
+    /* Estilos adicionales modo oscuro */
+    ul li a {
+        color: #d4af37;
+    }
+    
+    footer {
+        background-color: #1a1a1a;
+    }
+}
+
+/* === ESTILOS DEL FOOTER (Flexbox) === */
+footer {
+    display: flex;
+    justify-content: space-around; /* Distribución equitativa */
+    align-items: center;
+    padding: 20px;
+    background-color: #0a2540;
+    border-top: 3px solid #d4af37;
+    flex-wrap: wrap; /* Para móviles */
+}
+
+footer button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    flex-grow: 1; /* Ocupa espacio disponible */
+    max-width: 200px; /* Evita que se estiren demasiado */
+}
+
+/* Colores específicos para botones */
+footer button:first-child {
+    background-color: #005f8c;
+    color: white;
+}
+
+footer button:nth-child(2) {
+    background-color: #003a5d;
+    color: white;
+}
+
+footer button:last-child {
+    background-color: #d4af37;
+    color: #0a2540;
+    font-weight: 800;
+}
+
+/* === AJUSTES RESPONSIVE FOOTER === */
+@media screen and (max-width: 1024px) {
+    footer button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Móvil (<= 767px) */
+@media screen and (max-width: 767px) {
+    footer {
+        flex-direction: column; /* Botones en columna */
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    footer button {
+        width: 90%; /* Botones casi full-width */
+        max-width: none;
+        margin: 5px 0;
+    }
+    
+    /* Modo oscuro para footer */
+    footer {
+        background-color: #1a1a1a;
+        border-top-color: #d4af37;
+    }
+}
