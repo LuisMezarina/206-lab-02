@@ -187,3 +187,160 @@ footer button:last-child {
         margin: 5px 0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === LAYOUT GRID PRINCIPAL === */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #0a2540;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #e6f2ff;
+    padding: 1.5rem;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #0a2540;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* === TESTIMONIOS === */
+.grid-testimonios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonio-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* === COMPRA === */
+.resumen-compra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.imagen-producto {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.precio {
+    font-size: 1.5rem;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* === RESPONSIVE - BREAKPOINT 768px === */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "navbar"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .resumen-compra {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+
+    .main-content {
+        order: 3;
+    }
+}
+
+/* === ESTILOS GENERALES === */
+.navbar ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a.active {
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
+}
+
+.sidebar h2 {
+    color: #0a2540;
+    margin-bottom: 1rem;
+}
+
+.pasos-compra {
+    list-style: none;
+    padding: 0;
+}
+
+.pasos-compra li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.paso-activo {
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.boton-compra {
+    background-color: #d4af37;
+    color: #0a2540;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar | Dubai Propiedades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="grid-container">
+    <header class="navbar">
+        <img src="./Images/Logo.png" alt="Logo Dubai Propiedades" height="30px">
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="comprar.html" class="active">Comprar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar" aria-label="Proceso de compra">
+        <h2>Proceso de compra</h2>
+        <ol class="pasos-compra">
+            <li class="paso-activo">1. Selección</li>
+            <li>2. Documentación</li>
+            <li>3. Pago</li>
+            <li>4. Confirmación</li>
+        </ol>
+    </aside>
+
+    <main class="main-content">
+        <h1>Finaliza tu compra</h1>
+        
+        <section class="resumen-compra" aria-labelledby="resumen-producto">
+            <h2 id="resumen-producto">Resumen del producto</h2>
+            <img src="./Images/Compra001.webp" alt="Departamento en venta" class="imagen-producto">
+            <div class="detalles-producto">
+                <h3>Departamento Premium</h3>
+                <p>Ubicación: Miraflores, Lima</p>
+                <p class="precio">$350,000 USD</p>
+            </div>
+            
+            <form class="formulario-compra">
+                <h3>Información de contacto</h3>
+                <input type="text" placeholder="Nombre completo" aria-label="Nombre completo">
+                <input type="email" placeholder="Correo electrónico" aria-label="Correo electrónico">
+                <button type="submit" class="boton-compra">Confirmar compra</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2023 Dubai Propiedades. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

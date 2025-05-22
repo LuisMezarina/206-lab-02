@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios | Dubai Propiedades</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para testimonios */
+        .grid-testimonios {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonio-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: auto 1fr auto auto;
+            height: 100%;
+        }
+
+        .testimonio-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .testimonio-card > *:not(.testimonio-img) {
+            padding: 1rem;
+        }
+
+        blockquote {
+            margin: 0;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .testimonio-nombre {
+            font-weight: bold;
+            color: #0a2540;
+        }
+
+        .testimonio-propiedad {
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="grid-container">
+    <header class="navbar">
+        <img src="./Images/Logo.png" alt="Logo Dubai Propiedades" height="30px">
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="testimonios.html" class="active">Testimonios</a></li>
+                <li><a href="comprar.html">Comprar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar" aria-label="Filtros de testimonios">
+        <h2>Filtrar por</h2>
+        <div class="filtro">
+            <h3>Tipo de propiedad</h3>
+            <ul>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Casas</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <h1>Testimonios de nuestros clientes</h1>
+        
+        <div class="grid-testimonios">
+            <article class="testimonio-card" aria-labelledby="testimonio-1">
+                <img src="./Images/Cliente001.jpg" alt="Cliente María G." class="testimonio-img">
+                <div>
+                    <blockquote id="testimonio-1">"Increíble atención y resultados. Encontré exactamente lo que buscaba."</blockquote>
+                </div>
+                <p class="testimonio-nombre">— María González</p>
+                <p class="testimonio-propiedad">Departamento en Miraflores</p>
+            </article>
+
+            <article class="testimonio-card" aria-labelledby="testimonio-2">
+                <img src="./Images/Cliente002.webp" alt="Cliente Carlos R." class="testimonio-img">
+                <div>
+                    <blockquote id="testimonio-2">"Cumplieron todas mis expectativas. El proceso fue transparente y profesional."</blockquote>
+                </div>
+                <p class="testimonio-nombre">— Carlos Rojas</p>
+                <p class="testimonio-propiedad">Casa en Barranco</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2023 Dubai Propiedades. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
