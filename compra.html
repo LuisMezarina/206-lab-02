@@ -4,52 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprar | Dubai Propiedades</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bs-primary: #0a2540;
+            --bs-warning: #d4af37;
+        }
+        .navbar { border-bottom: 3px solid var(--bs-warning); }
+        .footer { border-top: 3px solid var(--bs-warning); }
+    </style>
 </head>
-<body class="grid-container">
-    <header class="navbar">
-        <img src="./Images/Logo.png" alt="Logo Dubai Propiedades" height="30px">
-        <nav aria-label="Navegación principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="comprar.html" class="active">Comprar</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <aside class="sidebar" aria-label="Proceso de compra">
-        <h2>Proceso de compra</h2>
-        <ol class="pasos-compra">
-            <li class="paso-activo">1. Selección</li>
-            <li>2. Documentación</li>
-            <li>3. Pago</li>
-            <li>4. Confirmación</li>
-        </ol>
-    </aside>
-
-    <main class="main-content">
-        <h1>Finaliza tu compra</h1>
-        
-        <section class="resumen-compra" aria-labelledby="resumen-producto">
-            <h2 id="resumen-producto">Resumen del producto</h2>
-            <img src="./Images/Compra001.webp" alt="Departamento en venta" class="imagen-producto">
-            <div class="detalles-producto">
-                <h3>Departamento Premium</h3>
-                <p>Ubicación: Miraflores, Lima</p>
-                <p class="precio">$350,000 USD</p>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./Images/Logo.png" height="30" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="comprar.html">Comprar</a>
+                    </li>
+                </ul>
             </div>
-            
-            <form class="formulario-compra">
-                <h3>Información de contacto</h3>
-                <input type="text" placeholder="Nombre completo" aria-label="Nombre completo">
-                <input type="email" placeholder="Correo electrónico" aria-label="Correo electrónico">
-                <button type="submit" class="boton-compra">Confirmar compra</button>
-            </form>
-        </section>
+        </div>
+    </nav>
+
+   
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <img src="./Images/Compra001.webp" class="img-fluid rounded shadow" alt="Departamento">
+            </div>
+            <div class="col-md-6">
+                <h1 class="fw-bold text-primary mb-4">Departamento Premium</h1>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item">📍 Ubicación: Miraflores, Lima</li>
+                    <li class="list-group-item">🛏️ 3 Habitaciones</li>
+                    <li class="list-group-item">🛁 2 Baños completos</li>
+                </ul>
+                <h3 class="text-warning fw-bold mb-4">$350,000 USD</h3>
+                
+                <form class="border p-4 rounded">
+                    <h4 class="mb-3">Información de Contacto</h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">
+                        Confirmar Compra
+                    </button>
+                </form>
+            </div>
+        </div>
     </main>
 
-    <footer class="footer">
-        <p>© 2023 Dubai Propiedades. Todos los derechos reservados.</p>
+    
+    <footer class="bg-primary text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2023 Dubai Propiedades. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
