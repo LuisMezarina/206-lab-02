@@ -1,56 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dubai Propiedades</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0a2540',
+                        golden: '#d4af37',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <img src="./Images/Logo.png" alt="Logo de empresa" height="30px">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Quienes somos</a></li>
-                <li><a href="#">Oportunidades</a></li>
-                <li><a href="#">Departamentos Exclusivos</a></li>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <header class="bg-primary text-white shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <img src="./Images/Logo.png" alt="Logo" class="h-8">
+            <ul class="flex space-x-8">
+                <li><a href="#" class="hover:text-golden transition">Inicio</a></li>
+                <li><a href="testimonios.html" class="hover:text-golden transition">Testimonios</a></li>
+                <li><a href="comprar.html" class="hover:text-golden transition">Comprar</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <hero>
-            <h1>Dubai Propiedades</h1>
-            <img id="Imagen02" src="./Images/Rascacielos.jpg" alt="Nuestro ultimo proyecto">
-
-
-            <p>Tu sueño de vivir en la casa perfecta comienza aquí. Ofrecemos las mejores propiedades con diseños 
-                exclusivos y ubicaciones privilegiadas. ¡Contáctanos y haz realidad tu hogar en el lugar que siempre soñaste!
+    <!-- Hero Section -->
+    <main class="animate-fade-in">
+        <section class="max-w-6xl mx-auto text-center py-20 px-4">
+            <h1 class="text-5xl font-bold text-primary mb-6">Dubai Propiedades</h1>
+            <img src="./Images/Rascacielos.jpg" alt="Proyecto" class="w-full rounded-xl shadow-2xl mb-8 max-h-96 object-cover">
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Tu sueño de vivir en la casa perfecta comienza aquí. ¡Contáctanos y haz realidad tu hogar!
             </p>
-        </hero>
+        </section>
 
-         <section class="galeria">
-            <h2>Galería de Imágenes</h2>
-            <div class="contenedor-galeria">
-                <!-- Tus imágenes irán aquí -->
-                <img src="./Images/Projecto001.jpg" alt="Proyecto Dubai 1">
-                <img src="./Images/Proyecto002.jpg" alt="Proyecto Dubai 2">
-                <img src="./Images/Proyecto 003.webp" alt="Proyecto Dubai 3">
-                <img src="./Images/Proyecto 004.jpg" alt="Proyecto Dubai 3">
+        <!-- Galería -->
+        <section class="py-12 bg-gray-100">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Galería de Imágenes</h2>
+            <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <img src="./Images/Projecto001.jpg" alt="Proyecto 1" class="rounded-lg shadow-md hover:scale-105 transition-transform h-48 w-full object-cover">
+                <img src="./Images/Proyecto002.jpg" alt="Proyecto 2" class="rounded-lg shadow-md hover:scale-105 transition-transform h-48 w-full object-cover">
+                <img src="./Images/Proyecto 003.webp" alt="Proyecto 3" class="rounded-lg shadow-md hover:scale-105 transition-transform h-48 w-full object-cover">
+                <img src="./Images/Proyecto 004.jpg" alt="Proyecto 4" class="rounded-lg shadow-md hover:scale-105 transition-transform h-48 w-full object-cover">
             </div>
         </section>
-        
-
     </main>
 
-    <footer>
-        <button>Email</button>
-        <button>Contactanos</button>
-        <button>Log In</button>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-4 mb-4">
+                <button class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full transition">Email</button>
+                <button class="bg-gray-700 hover:bg-gray-800 px-6 py-2 rounded-full transition">Contáctanos</button>
+                <button class="bg-golden hover:bg-yellow-600 text-primary px-6 py-2 rounded-full font-bold transition">Log In</button>
+            </div>
+            <p class="text-sm">© 2023 Dubai Propiedades. Todos los derechos reservados.</p>
+        </div>
     </footer>
-
-
-    
 </body>
 </html>
