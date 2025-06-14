@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios Autenticados</title>
+    <link rel="stylesheet" href="style.css">
+       <style>
+    .testimonio {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .testimonio img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        object-fit: cover;
+    }
+
+    .testimonio-contenido {
+        display: flex;
+        align-items: center;
+    }
+
+    .testimonio-texto {
+        font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./Images/Logo.png" alt="Logo de empresa" height="30px">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Testimonios Verificados de Clientes</h1>
+            <p>Escucha lo que dicen nuestros clientes después de comprar su propiedad con nosotros.</p>
+
+            <div class="testimonio">
+                <div class="testimonio-contenido">
+                    <img src="Images/ultimaimagen02.avif" alt="Cliente feliz">
+                    <div>
+                        <strong>María González</strong>
+                        <p class="testimonio-texto">"Gracias a Dubai Propiedades encontré mi hogar soñado. Todo fue transparente y rápido."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonio">
+                <div class="testimonio-contenido">
+                    <img src="Images/ultimaimagen01.jpg" alt="Cliente satisfecho">
+                    <div>
+                        <strong>Carlos Pérez</strong>
+                        <p class="testimonio-texto">"Increíble atención y profesionalismo. Recomiendo esta empresa al 100%."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="location.href='index.html'">Volver al Inicio</button>
+    </footer>
+</body>
+</html>
