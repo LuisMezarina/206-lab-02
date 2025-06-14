@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sube tus Fotos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .formulario-subida {
+            background-color: #f3f3f3;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .formulario-subida input[type="file"] {
+            margin-top: 1rem;
+        }
+
+        .formulario-subida button {
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .formulario-subida button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./Images/Logo.png" alt="Logo de empresa" height="30px">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>¿Qué tipo de propiedad estás buscando?</h1>
+            <p>Envíanos imágenes de referencia del tipo de propiedad que deseas. Esto nos ayudará a ofrecerte opciones personalizadas.</p>
+
+            <form class="formulario-subida" action="#" method="post" enctype="multipart/form-data">
+                <label for="fotos">Sube tus fotos (hasta 3):</label><br>
+                <input type="file" id="fotos" name="fotos" accept="image/*" multiple required><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="location.href='index.html'">Volver al Inicio</button>
+    </footer>
+</body>
+</html>
